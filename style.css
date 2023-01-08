@@ -1,0 +1,209 @@
+body {
+    background-color: #E9ECF8;
+    overflow: hidden;
+}
+
+                        /* HEADER */
+header {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 15px 0;
+    text-align: center;
+}
+.img-logo {
+    width:  60px;
+    height: 60px;
+    vertical-align: middle;
+    margin-right: 20px;
+    background-color: #FFFFFF;
+}
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline;
+}
+
+                        /* MAIN */
+.contenido {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    height: 80vh;
+}
+/* Fondo */
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-image: linear-gradient(to top, #7f1a96 0%, #E9ECF8 100%);
+}  
+.wave {
+    width: 1000px;
+    height: 1025px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: -500px;
+    border-radius: 20%;
+    background: rgba(233,236,248,0.75);
+    animation: wave 15s infinite linear;
+}
+@keyframes wave {
+    from { transform: rotate(0deg);}
+    from { transform: rotate(360deg);}
+}
+.input {
+    width: auto;
+    margin: 30px auto;
+}
+.input-text {
+    width: 95%;
+    resize: none;
+    border: none;
+    margin: 50px auto;
+    outline: none;
+    display: block;
+    background-color: transparent;
+    color: #052051;
+    font-size: 25px;
+    text-align: center;
+}
+.input-contenido p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+}
+.input-botones {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-btn {
+    background-color: transparent;
+    margin: 15px;
+    padding: 10px;
+    font-size: 20px;
+    border-color: #7f1a96;
+    border-radius: 20%;
+    text-align: center;
+    cursor: pointer;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+.input-btn:hover {
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    animation:slidebg 2s linear infinite;
+}
+@keyframes slidebg {
+    to {
+        background-position:20vw;
+    }
+}
+.output {
+    display: grid;
+    grid-template-rows: 5fr 2fr;
+    width: auto;
+}
+#msg-out {
+    background-image: url(img/buscando.jpg);
+    background-size: cover;
+    opacity: .6;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    color: #FFFFFF;
+    background-color: #000000;
+}
+.msg-out {
+    width: 40%;
+    padding: auto;
+    padding-top: 40px;
+    text-align: center;
+}
+.input-btn-copy {
+    margin: auto;
+    background-color: rgba(233,236,248,0.75);
+}
+
+                        /* FOOTER */
+footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 19px;
+}
+
+                        /* MEDIA QUERIES */
+@media screen and (max-width: 500px) {
+    .contenido { height: 78vh;}
+    .img-logo {
+        width: 60px;
+        height: 60px;
+    }
+    h1 {
+        display: block;
+        margin-top: 15px;
+    }
+    .input-text {
+        color: #052051;
+        font-size: 25px;
+    }
+    .input-contenido p{
+        font-size: 20px;
+    }
+    .input-btn {
+        margin: 10px 5px;
+        padding: 10px 5px;
+        font-size: 15px;
+    }
+    .output { grid-template-rows: 3fr 2fr;}
+    #msg-out { font-size: 25px;}
+    .input-btn-copy {
+        height: 15%;
+        margin: 0 auto;
+        margin-top: 45px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .contenido { height: 70.5vh;}
+    .img-logo {
+        width: 60px;
+        height: 60px;
+    }
+    h1 {
+        display: block;
+        margin-top: 10px;
+    }
+    .input-text { font-size: 18px;}
+    .input-contenido p{ font-size: 16px;}
+    .input-btn {
+        margin: 10px 5px;
+        padding: 10px 5px;
+        font-size: 10px;
+    }
+    .input-btn-copy {
+        margin: 0 auto;
+        margin-top: 45px;
+    }
+    footer {padding: 10px;}
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 48
+}
